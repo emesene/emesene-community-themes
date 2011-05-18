@@ -1,0 +1,1 @@
+talkTo('%sender%', '%userIconPath%');
