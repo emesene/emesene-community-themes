@@ -3,10 +3,10 @@ body {
 	font-weight: normal;
 }
 	                
-.incoming { color: #a6002c; }
+.incoming { font-family: helvetica,sans-serif; color: #a6002c; }
 .context .incoming { color:#A65369; }
 
-.outgoing { color: #001190; }
+.outgoing { font-family: helvetica,sans-serif; color: #001190; }
 .context .outgoing { color: #47508F; }
 
 .container {
@@ -41,21 +41,21 @@ body {
 	background: url("images/header.png");
 	background-repeat: x;
 	background-position: bottom;
-	width: 100%;
-	overflow: none;
+	width: 1%;
 	position: fixed;
 	top: 0px;
 	left: 0px;
-	z-index: 2;
-	font-size: 8px;
+	z-index: -2;
+	font-size: 1px;
+	visibility: hidden
 	}
 #header td{
 	padding: 0px;
 	}
 #header img{
-	width: 42px;
-	height: 42px;
-	border: 1px inset #777777;
+	width: 0px;
+	height: 0px;
+	border: 0px inset #777777;
 	background: #FFFFFF;
 	}
     
@@ -64,6 +64,7 @@ body {
     right: 0;
     top: -16px;
     background: url("images/top_right.png") top right no-repeat;
+    font-family: helvetica,sans-serif;
     font-size: 9px;
     font-weight: bold;
     text-transform: uppercase;
@@ -166,7 +167,7 @@ IMG {
 }
 
 h1 {
-	font: "Andale Mono";
+	font-family: helvetica,sans-serif;
 	font-size: 18px;
 	font-weight: regular;
 	text-shadow: 3px 3px 4px gray;
@@ -175,7 +176,7 @@ h1 {
 	}
 
 h2 {
-	font: "Andale Mono";
+	font-family: helvetica,sans-serif;
 	font-size: 11px;
 	font-weight: regular;
 	text-shadow: 3px 3px 4px gray;
