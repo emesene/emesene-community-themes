@@ -150,6 +150,7 @@ img#bar,
 
 .message{
 	position:relative;
+	top:82px;
 	margin:0;
 	padding:0;
 }
