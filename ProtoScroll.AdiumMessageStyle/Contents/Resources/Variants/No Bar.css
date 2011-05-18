@@ -1,0 +1,23 @@
+@import url('../Main.css');
+
+#header{
+	background: url("images/header.png");
+	background-repeat: x;
+	background-position: bottom;
+	width: 1%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: -2;
+	font-size: 1px;
+	visibility: hidden
+	}
+#header td{
+	padding: 0px;
+	}
+#header img{
+	width: 0px;
+	height: 0px;
+	border: 0px inset #777777;
+	background: #FFFFFF;
+	}
