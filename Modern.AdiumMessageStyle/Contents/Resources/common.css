@@ -1,0 +1,244 @@
+	#header {
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 73px;
+		border-bottom: 1px dotted #B05742;
+		background: #B05742 url('images/grad_white5.png') repeat-x left bottom;
+		line-height: 1.6em;
+		z-index: 13;
+		color: #ffffff;
+		font-size: 11px;
+	}
+
+	#header p {
+		margin: 0px 15px 0px 0px;
+	}
+
+	#status-img {
+		float: right;
+		background: transparent url('balloons/Online.png') no-repeat right top;
+		height: 73px;
+		width: 130px;
+	}
+
+	#contactImage {
+		float: left;
+	}
+
+	#contactImage img {
+		height: 65px;
+		width: 65px;
+		margin: 2px 8px 2px 2px;
+		border: 2px solid #B05742;
+	}
+
+	#headerText, #nameOnly {
+		padding: 0px 0px;
+		font-weight: bold;
+		line-height: 1.7em;
+		height: 1.7em;
+		text-shadow: 2px 2px 2px #000000;
+	}
+
+	/* Contact Name (Change font-size here if you wish)*/
+	#talkingto {
+		font-size: 19px;
+		line-height: 1.6em;
+		height: 1.6em;
+		overflow: hidden;
+	}
+
+	#statusText {
+		font-size: 13px;
+		height: inherit;
+		overflow: hidden;
+	}
+
+	#startTime {
+		font-size: 12px;
+		height: inherit;
+		overflow: hidden;
+	}
+
+	#typingIndicator {
+		visibility: hidden;
+		float: right;
+		position: absolute;
+		top: 50px;
+		right: 8px;
+	}
+
+	#nameOnly {
+		color: black;
+		overflow: hidden;
+		display: none;
+		font-size: 13px;
+		padding: 4px 5px;
+		line-height: 1.4em;
+		height: 1.4em;
+		margin: 0px 50px 0px 0px;
+		text-shadow: 2px 2px 2px #ffffff;
+	}
+
+	#headerControl {
+		font-weight: bold;
+		position: fixed;
+		color: white;
+		top: 4px;
+		right: 5px;
+		text-shadow: 2px 2px 2px #000000;
+	}
+
+	#spacer {
+		height: 65px;
+	}
+
+	/* Ballons indicating status (ie Online, Away...etc)*/
+	#balloonBody {
+		position: fixed;
+		z-index: -10;
+		top: 0px;
+		right: 0px;
+	}
+
+	a {
+		color: #19519B;
+		font-weight: inherit;
+		text-decoration: none;
+	}
+
+	a:hover {
+		color: #CC6633;
+		cursor: pointer;
+	}
+
+	div.status {
+		text-align: center;
+	}
+
+	div.spacer {
+		height: 6px;
+	}
+
+	body {
+		margin-top: -5px;
+		background-color: white;
+		color: black;
+	}
+
+	div.incoming, div.outgoing, div.incoming_followup, div.outgoing_followup {
+		width: 100%;
+		padding-bottom: 8px;
+	}
+
+	div.incoming_followup, div.outgoing_followup {
+		position: relative;
+		top: -5px;
+	}
+
+	div.header, div.date, div.followup_head{
+		background: url(images/glass.png) 0% 50% repeat-x;
+		position: relative;
+		color: #fff;
+		padding: 2px 15px 2px 11px;
+		margin-bottom: 3px;
+	}
+	
+	/*This is the text that shows the name of who is sending the message, i.e. "my name." */
+	
+	div.header{
+		color: #444;
+	}
+
+	
+
+	.msg img {
+		vertical-align: middle;
+		position: relative;
+		top: -1px;
+	}
+
+	div.msg {
+		padding: 2px 15px 2px 2px;
+		color: #111;
+	}
+	
+	div.incoming_followup div.msg, div.outgoing_followup div.msg{
+		position: relative;
+		top: -3px;
+		left: -9px;
+	}
+
+	div.header div.msg {
+		padding: 0px 5px 0px 0px;
+	}
+	
+	
+	
+	div.date_place_holder {
+		float: right;
+		padding: 0;
+		visibility: hidden;
+	}
+
+	div.date {
+		position: absolute;
+		top: 0;
+		right: 0;
+		text-align: center;
+		padding: 2px 8px 2px 5px;
+		color: #fff;
+	}
+
+	img.tr, img.tl, img.br, img.bl {
+		position: absolute;
+	}
+
+	img.br, img.bl {
+		bottom: 0;
+	}
+
+	img.tr, img.br {
+		right: 0;
+	}
+
+	img.tl, img.bl {
+		left: 0;
+	}
+
+	img.tl, img.tr {
+		top: 0;
+	}
+
+	div.incoming_followup .header, div.outgoing_followup .header, div.context_followup .header {
+		color: black;
+	}
+
+	div.followup_head {
+		position: relative;
+		padding: 0;
+		top: -2px;
+		left: -10px;
+		height: 1px;
+	}
+
+	/*
+		incoming colors
+	*/
+	div.context_followup .header .followup_head {
+		background-color: gray;
+	}
+
+	div.context .date, div.context_followup .date {
+		background-color: gray;
+	}
+
+	div.context .header {
+		background-color: gray;
+	}
+
+	div.nextintime{ 
+		color: #444; 
+	}
