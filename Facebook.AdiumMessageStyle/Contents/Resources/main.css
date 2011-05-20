@@ -1,6 +1,6 @@
 body {
     background-color: #F7F7F7;
-	font-family: Lucida Grande;
+	font-family: helvetica,sans-serif;
 	font-weight: normal;
 	margin: 0px;
 
@@ -174,5 +174,6 @@ img.scaledToFitImage{ width:auto; }
 #Chat {
 	overflow: hidden;
 	padding: 8px;
+	margin-top: 65px;
 
 }
