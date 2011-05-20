@@ -1,0 +1,178 @@
+body {
+    background-color: #F7F7F7;
+	font-family: Lucida Grande;
+	font-weight: normal;
+	margin: 0px;
+
+}
+
+#heading { 
+	position: fixed; 
+	top: 0px; 
+	left: 0px; 
+	margin: 0; 
+	padding: 5px;
+	font-weight: regular; 
+	background-color:#eeeeee;
+	z-index: 999;
+	width:100%;
+	height:56px;
+	border-bottom: 1px solid #e0e0e0;
+
+	
+}
+
+#heading .conversationIncomingIcon {
+	position:absolute;
+	left:5px;
+	top:5px;
+}
+
+#heading .conversationIncomingIcon img {
+	width:50px;
+	height:50px;
+}
+
+#heading .conversationWith {
+	position:relative;
+	left:60px;
+	margin:5px 0 0 0;
+	font-family: Lucida Grande;
+	font-size: 9pt;
+	color: #333333;
+	font-weight: bold;
+	overflow:hide;
+}
+
+
+
+.sender_incoming { color: #3B5998; }
+
+.sender_outgoing { color: #777777; }
+
+
+.container {
+	width: 100%;
+    	position: relative;
+	margin: 8px 0px 0px 40px;
+	min-height: 25px;
+        border-bottom: 1px solid #eee;
+
+}
+
+
+                
+.sender_incoming, .sender_outgoing {
+    top: -18px;
+    left: -48px;
+    position: absolute;
+    font-size: 8pt;
+    font-weight: bold;
+    padding: 13px 5px 0 56px;
+    overflow: hidden;
+    text-overflow: hide;
+}
+
+
+    
+.time_initial {
+    position: absolute;
+    right: 39px;
+    top: -18px;
+    font-size: 7pt;
+    font-weight: normal;
+    text-transform: lowercase;
+    color: #bababa;
+    padding: 14px 0px 5px 5px;
+    margin-bottom: 0;
+    }
+    
+.buddyicon {
+   	position: absolute;
+    	top: -8px;
+    	left: -42px;
+	z-index: 4;
+	width: 35px;
+    }
+	
+.buddyicon img {
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	z-index: 3;
+	}
+    
+.message {
+	position: relative;
+	margin: 0px -1px -7px -48px;
+	padding: 8px 0 8px 56px;
+	min-height: 25px;
+
+}
+
+    
+.text {
+	padding: 6px 40px 6px 0;
+	margin: 0;
+	overflow: auto;
+}
+ 
+
+.status_container {
+    	position: relative;
+	margin-left: 45px;
+	left: -6px;
+	margin-right: -7px;	
+    	color: #bababa;
+    	font-size: 8pt;
+    	font-weight: normal;
+
+}
+
+ .status_container:first-child {
+	left: -6px;
+}
+
+.status_container + .status_container {
+	display: none;
+}
+
+
+.status_message {
+    	text-align: left;
+	margin-left: -45px;
+	padding: 3px 0px 5px 8px;
+    	position: relative;
+	overflow: auto;
+
+}
+
+.status_time {
+    position: absolute;
+    right: 0px;
+    top: -10px;
+    font-size: 7pt;
+    font-weight: normal;
+    text-transform: lowercase;
+    color: #bababa;
+    padding: 14px 0px 0px 0px;
+    margin-bottom: 0;
+    }
+
+.status_time:first-child {
+	right: -1px;
+}
+
+
+IMG {
+	vertical-align:middle;
+        top: 0px;
+}
+
+img.scaledToFitImage{ width:auto; }
+
+#Chat {
+	overflow: hidden;
+	padding: 8px;
+
+}
