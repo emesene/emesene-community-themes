@@ -7,7 +7,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleGetInfoString</key>
-	<string>ProtoScroll</string>
+	<string>0.2</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.adiumx.protoscroll.style</string>
 	<key>CFBundleInfoDictionaryVersion</key>

@@ -1,0 +1,9 @@
+@import url('Light.css');
+
+body {
+    background: url('../Images/bg.jpg') center repeat-x fixed;
+}
+
+#top {
+	visibility: hidden;
+}
