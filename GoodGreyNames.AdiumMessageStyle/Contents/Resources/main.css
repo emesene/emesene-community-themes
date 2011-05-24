@@ -1,0 +1,58 @@
+*
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+body
+{
+	background-color: #8B8B8B;
+}
+
+.message
+{
+	margin: 0px 5px 0px 5px;
+}
+
+.out { margin-left: 45px; }
+.in { }
+
+.t { background: url(images/t.png) top repeat-x; background-color: #EEEEEE}
+.l { background: url(images/l.png) left repeat-y; }
+.r { background: url(images/r.png) right repeat-y; }
+.b { background: url(images/b.png) bottom repeat-x; }
+
+.tl { background: url(images/tl.png) top left no-repeat; }
+.tr { background: url(images/tr.png) top right no-repeat; }
+.bl { background: url(images/bl.png) bottom left no-repeat; }
+.br { background: url(images/br.png) bottom right no-repeat; }
+
+.inside
+{
+	padding: 8px 12px 10px 12px;
+font-family:Helvetica,sans-serif;
+font-size:13px;
+}
+
+.old
+{
+	color: #666;
+}
+
+.next
+{
+	border-top: 1px #AAA solid;
+	margin: 4px -1px 3px -1px;
+}
+
+.status
+{
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+
+#Chat
+{
+	overflow: hidden;
+}
