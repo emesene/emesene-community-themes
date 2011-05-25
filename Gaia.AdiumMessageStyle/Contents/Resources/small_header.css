@@ -18,3 +18,7 @@ img.bar{
 #header h1{
 	display:none;
 }
+
+.message {
+	top:0;
+}

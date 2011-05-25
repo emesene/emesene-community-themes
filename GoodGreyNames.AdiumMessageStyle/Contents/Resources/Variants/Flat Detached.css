@@ -1,0 +1,71 @@
+*
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+body
+{
+	background-color: #EEEEEE;
+}
+
+.message
+{
+	color: #333;
+	margin: 0px 5px 0px 5px;
+}
+
+.out { margin-left: 45px; }
+.in { }
+
+.t { background: url(../images/variant/t.png) top repeat-x; background-color: #BABABA}
+.l { background: url(../images/variant/l.png) left repeat-y; }
+.r { background: url(../images/variant/r.png) right repeat-y; }
+.b { background: url(../images/variant/b.png) bottom repeat-x; }
+
+.tl { background: url(../images/variant/tl.png) top left no-repeat; }
+.tr { background: url(../images/variant/tr.png) top right no-repeat; }
+.bl { background: url(../images/variant/bl.png) bottom left no-repeat; }
+.br { background: url(../images/variant/br.png) bottom right no-repeat; }
+
+.inside
+{
+	padding: 8px 12px 10px 12px;
+}
+
+.old
+{
+	color: #666;
+}
+
+.next
+{
+	border-top: 1px #EEE solid;
+	margin: 4px -10px 3px -10px;
+}
+
+.foot
+{
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	background-color: #D8D8D8;
+	border-bottom: 1px #8D8D8D solid;
+	height: 20px;
+}
+
+.foot img { width: 16px; height: 16px; margin-top: 2px; margin-left: 2px;}
+.foot1 {margin-top: -18px; margin-left: 21px;}
+
+.status
+{
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+
+#Chat
+{
+	overflow: hidden;
+}

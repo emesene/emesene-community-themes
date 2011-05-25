@@ -1,0 +1,19 @@
+@import url('../main.css');
+
+               
+.sender_incoming, .sender_outgoing {
+    left: -96px;
+}
+    
+.buddyicon {
+	display: none !important;
+    }
+	
+.buddyicon img {
+	display: none !important;
+	}
+    
+.message {
+	margin: 0px -1px -7px -96px;
+
+}

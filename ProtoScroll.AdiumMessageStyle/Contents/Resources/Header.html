@@ -1,12 +1,16 @@
-<table id="header" height=45px><tr>
-	<td width="1">
-		<img src="%incomingIconPath%" />
-	</td>
-	<td>
-		<h1>%chatName%</h1>
-		<h2>Started: %timeOpened{%I:%M %p}%</h2>
-	</td>
-	<td align="right" width="1">
-		<img src="%outgoingIconPath%" />
-	</td>
-</tr></table>
+<div id="overlay">
+</div>
+<div id="top">
+	<ul id="header">
+		<li width="1">
+			<img src="%incomingIconPath%" class="left" />
+		</li>
+		<li class="name">
+			<h1>%chatName%</h1>
+			<h2>Started: %timeOpened{%H:%M}%</h2>
+		</li>
+		<li width="1">
+			<img src="%outgoingIconPath%" class="right" />
+		</li>
+	</ul>
+</div>

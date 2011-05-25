@@ -1,0 +1,16 @@
+@import url(base.css);
+
+		.incoming  { color: #2D2D2D }
+		.outgoing  { color: #2D2D2D }
+		.status  { color: #800000; font-weight: bold; text-decoration; none }
+		.greyed { color: #9F9F9F; }
+
+		.incoming_link a  { color: #800000; text-decoration: none }
+		.outgoing link a { color: #800000; text-decoration: none }
+		.incoming_link a:hover { color: #800000; font-weight: bold; text-decoration: none }
+		.outgoing link a:hover { color: #800000; font-weight: bold; text-decoration: none }
+		.status_link a  { color: #800000; text-decoration: none }
+		.greyed_link a { color: #9F9F9F; text-decoration:none; }
+		
+		a { color: #800000; text-decoration: none }
+		a:hover { color: #800000; font-weight: bold; text-decoration: none }

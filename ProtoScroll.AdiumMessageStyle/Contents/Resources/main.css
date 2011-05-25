@@ -1,190 +1,334 @@
 body {
-    background: white url(images/background.png) center top repeat-x fixed;
+	background: rgb(23, 23, 23);
 	font-weight: normal;
-}
-	                
-.incoming { font-family: helvetica,sans-serif; color: #a6002c; }
-.context .incoming { color:#A65369; }
-
-.outgoing { font-family: helvetica,sans-serif; color: #001190; }
-.context .outgoing { color: #47508F; }
-
-.container {
-    position: relative;
-    background: url("images/bottom_right.png") bottom right no-repeat;
-	margin: 15px 0px 0px 43px;
+	margin: 0;
+	display: inline;
+	padding: 0;
+	top: 0;
 }
 
-.context {
-	background: url("images/context_bottom_right.png") bottom right no-repeat;
-}
-                
-.sender {
-    top: -16px;
-    left: -41px;
-    right: 38px;
-    position: absolute;
-    background: url("images/top_left.png") top left no-repeat;
-    font-size: 11px;
-    font-weight: bold;
-    text-shadow: 1px 1px 3px #ccc;
-    padding: 13px 0 0 26px;
-    margin-bottom: 0;
-	z-index: 1;
+IMG {
+	vertical-align:middle;
 }
 
-.context .sender {
-	background: url("images/context_top_left.png") top left no-repeat; 
+#Chat {
+	overflow: hidden;
 }
 
-#header{
-	background: url("images/header.png");
-	background-repeat: x;
-	background-position: bottom;
-	width: 1%;
+#overlay {
+    min-height: 200px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    background: 
+	-webkit-gradient(
+	    linear,
+	    left bottom,
+	    left top,
+	    color-stop(0.68, rgba(200, 200, 200, 0)),
+	    color-stop(0.15, rgba(255, 255, 255, 0.4))
+	);
+}
+
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+		Header
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+#top{
+	background: 
+	-webkit-gradient(
+	    linear,
+	    left bottom,
+	    left top,
+	    color-stop(0.68, rgb(30, 30, 35)),
+	    color-stop(0.15, rgb(0, 0, 0))
+	);
+	-webkit-box-shadow: 0px 0px 10px rgba(30, 30, 35, 0.8);
+	opacity: 0.4;
+    width: 100%;
+    height: 40px;
+    padding-bottom: 15px;
 	position: fixed;
-	top: 0px;
+    top: -40px;
 	left: 0px;
-	z-index: -2;
-	font-size: 1px;
-	visibility: hidden
-	}
-#header td{
-	padding: 0px;
-	}
-#header img{
-	width: 0px;
-	height: 0px;
-	border: 0px inset #777777;
-	background: #FFFFFF;
-	}
-    
-.time_initial {
-    position: absolute;
-    right: 0;
-    top: -16px;
-    background: url("images/top_right.png") top right no-repeat;
-    font-family: helvetica,sans-serif;
-    font-size: 9px;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-shadow: 1px 1px 3px #ccc;
-    color: #808080;
-    padding: 14px 16px 0 5px;
-    margin-bottom: 0;
-    }
-    
-.context .time_initial {
-	background: url("images/context_top_right.png") top right no-repeat;
+	z-index: 2;
+	font-size: 8px;
+	-webkit-border-bottom-right-radius: 6px;
+	-webkit-border-bottom-left-radius: 6px;
+	text-shadow: #fff 0px 0px 1px;
 }
-    
+
+#header {
+    list-style: none;
+    position: fixed;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+#header .name{
+    position: absolute;
+	z-index: 3;
+	left: 50px;
+	top: 15px;
+	min-width: 20px;
+	overflow: hidden;
+}
+
+#header img{
+    vertical-align: top;
+    top: 7px;
+	max-width: 42px;
+	max-height: 42px;
+	border: 2px;
+	border-radius: 6px;
+	-webkit-box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4);
+}
+
+img.left{
+    position: absolute;
+   	z-index: 3;
+   	left: 10px;
+}
+
+img.right{
+    position: absolute;
+   	z-index: 3;
+   	right: 10px;
+}
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+		Main Container
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+/* Main */
+.container,
+.container .context {
+	position: relative;
+	display: block;
+}
+
+/* Message */
+.message {
+	position: relative;
+	color: #b3b3b3;
+	margin: 6px 20px 1px 20px;
+	padding: 6px 20px 1px 20px;
+    opacity: 0.8;
+	background:
+	-webkit-gradient(
+	    linear,
+	    left bottom,
+	    left top,
+	    color-stop(0.68, rgb(20, 20, 25)),
+	    color-stop(0.15, rgb(0, 0, 0))
+	);
+	-webkit-box-shadow: 0px 0px 5px rgba(30, 30, 35, 0.8);
+	-webkit-border-radius: 6px;
+}
+/*
+.container .message:hover {
+	background:
+	-webkit-gradient(
+	    linear,
+	    left bottom,
+	    left top,
+	    color-stop(0.68, rgb(20, 20, 25)),
+	    color-stop(0.15, rgb(0, 0, 0))
+	);
+	-webkit-box-shadow: 0px 0px 10px rgba(255, 204, 51, 0.8);
+}
+*/
+.message p {
+	margin: 13px 0px 1px 0px;
+	padding: 0px 0px 5px 0px;
+}
+
+/* Sender */
+.sender {
+	position: absolute;
+	font-size: 11px;
+	font-weight: bold;
+	z-index: 1;
+	left: 40px;
+	top: 7px;
+}
+
+/* Time sent */
+.time_initial {
+	position: absolute;
+	font-size: 9px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #808080;
+	z-index: 1;
+	right: 30px;
+	top: 9px;
+}
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+		History
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+/* Main */
+.container .context {
+    opacity: 0.6;
+}
+
+/* Message */
+.container .context .message {
+	background:
+	-webkit-gradient(
+	    linear,
+	    left bottom,
+	    left top,
+	    color-stop(0.68, rgb(20, 20, 25)),
+	    color-stop(0.15, rgb(0, 0, 0))
+	);
+	color: #b3b3b3;
+	
+}
+
+/* Time sent */
+.container .context .time_initial {
+	color: #af9e86;
+}
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+		Type
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+p {
+	padding: 0;
+	overflow: auto;
+}
+
+a {
+	color: #ffcc33;
+	overflow: auto;
+}
+
+h1 {
+	font-family: helvetica,sans-serif;
+	font-size: 12px;
+	font-weight: regular;
+	margin: 0px 0px 0px 10px;
+	margin-top; -3px;
+	text-align: left;
+	color: #FFCC33;
+	overflow: hidden;
+}
+
+h2 {
+	font-family: helvetica,sans-serif;
+	font-size: 9px;
+	font-weight: regular;
+	margin: 0px 0px 0px 10px;
+	margin-top; -10px;
+	text-align: left !important;
+	color: #FFCC33;
+	overflow: hidden;
+}
+
+a:hover {
+	color: #ffe69d;
+	font-weight: underline;
+	text-shadow: #fff 0px 0px 1px;
+}
+
+.container .incoming {
+	font-family: helvetica,sans-serif;
+	color: #FFCC33;
+	text-shadow: #fff 0px 0px 1px;
+}
+.container .context .incoming {
+	color: #d1cfc2;
+	text-shadow: #fff 0px 0px 2px;
+}
+
+.container .outgoing {
+	font-family: helvetica,sans-serif;
+	color: #9acbe2;
+	text-shadow: #fff 0px 0px 1px;
+}
+
+.container .context .outgoing {
+	color: #b5b4b2;
+	text-shadow: #fff 0px 0px 1px;
+}
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+		"status"
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+.status_container {
+	position: relative;
+	margin: 10px 0px 0px 0px;
+	color: #FFCC33;
+	font-size: 8px;
+	font-weight: bold;
+	text-transform: lowercase;
+	height: 18px;
+	background:
+	-webkit-gradient(
+	    linear,
+	    left bottom,
+	    left top,
+	    color-stop(0.68, rgba(30, 30, 35, 0.7)),
+	    color-stop(0.15, rgba(0, 0, 0, 0.7))
+	);
+	-webkit-box-shadow: 0px 0px 4px rgba(255, 204, 51, 0.8);
+	text-shadow: #fff 0px 0px 1px;
+	-webkit-border-top-right-radius: 6px;
+	-webkit-border-top-left-radius: 6px;
+}
+
+.status_message {
+	position: relative;
+	left: 20px;
+	padding: 3px 0px 3px 0px;
+}
+
+.status_time {
+	position: absolute;
+	top: 0px;
+	right: 20px;
+	padding: 3px 0px 3px 0px;
+	text-transform: uppercase;	
+}
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+		Unused
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+/*
 .time_consecutive {
-    float: left;
-    background: 29px url("images/arrow.png") no-repeat;
-    margin-left: -40px;
-    margin-top: 5px;
-    font-size: 9px;
-    text-shadow: 1px 1px 3px #ddd;
-    color: #bfbfbf;
-    }
+	float: right;
+	position: absolute;
+	margin-top: 3px;
+	right: 10px;
+	font-size: 9px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #808080;
+	z-index: 2;
+}
 
 .buddyicon {
-    position: absolute;
+	position: absolute;
 	background: url("images/buddy_background.png");
-    top: -5px;
-    left: -29px;
-    z-index: 2;
+	top: -5px;
+	left: -29px;
+	z-index: 2;
 	height: 40px;
 	width: 40px;
-    }
-	
+}
+
 .buddyicon img {
 	position: absolute;
 	top: 3px;
 	left: 3px;
 	z-index: 1;
-	}
-    
-.message {
-    position: relative;
-    background: url("images/bottom_left.png") bottom left repeat-y;
-    top: 0;
-    left: -41px;
-    margin-right: -24px;
-    text-shadow: 1px 1px 3px #ccc;
-    padding: 6px 0 10px 26px;
-    color: #404040;
-    }
- 
-.context .message {
-	background: url("images/context_bottom_left.png") bottom left repeat-y;
-	color: #666666;
-	}    
-   
- p {
-    padding: 0;
-    margin-bottom: 6px;
-	overflow: auto;
 }
-    
-.status_container {
-    position: relative;
-    background: url("images/status_background.png");
-    margin: 0px 30px -1px 32px;
-    color: #fff;
-    text-shadow: 1px 1px 3px #aaa;
-    font-size: 9px;
-    font-weight: bold;
-    text-transform: lowercase;
-    height: 29px;
-}
-
-.status_message {
-    position: relative;
-    left: -30px;
-    background: url("images/status_left.png") top left no-repeat;
-    padding: 7px 8px 7px 15px;
-}
-
-.status_time {
-    position: absolute;
-    top: 0px;
-    right: -30px;
-    padding: 8px 16px 8px 5px;
-    text-transform: uppercase;
-    font-size: 8px;
-    background: url("images/status_right.png") top right no-repeat;
-}
-
-IMG {
-	vertical-align:middle;
-        top:-3px;
-}
-
-#Chat {
-	overflow: hidden;
-	margin-bottom: -8px;
-}
-
-h1 {
-	font-family: helvetica,sans-serif;
-	font-size: 18px;
-	font-weight: regular;
-	text-shadow: 3px 3px 4px gray;
-	margin: 0px;
-	margin-top; -3px;
-	}
-
-h2 {
-	font-family: helvetica,sans-serif;
-	font-size: 11px;
-	font-weight: regular;
-	text-shadow: 3px 3px 4px gray;
-	margin: 0px;
-	margin-top; -5px;
-	}
-
-a:hover {
-	color: #6666CC;
-	font-weight: underline;
-	}
+*/

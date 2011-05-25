@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<base href="%@">
-	<script type="text/ecmascript" defer="defer">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<base href="%@">
+	
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript" charset="utf-8">
+		</script>
+
+		<script type="text/ecmascript" defer="defer">
 		//Appending new content to the message view
 		function appendMessage(html) {
 			// appendTimestamp();
@@ -124,14 +128,35 @@
 		}
 		window.onresize = windowDidResize;
 	</script>
-	
-	<style id="mainStyle" type="text/css" media="screen,print">	@import url( "%@" ); </style>
 
-</head>
-<body onload="alignchat(true);" style="==bodyBackground==">
-%@
-<div id="Chat">
-</div>
-%@
-</body>
+    	<style id="mainStyle" type="text/css" media="screen,print">	@import url( "%@" ); </style>
+
+		<script type="text/javascript" charset="utf-8">
+			$(document).ready(function ()
+			{
+			
+			var $head = $('#top');
+					
+			$head
+				.mouseover(function ()
+				{	//over
+					$(this).stop().animate({ top : '0', opacity : '1' }, { duration : 600 })
+				});
+			
+			$head
+				.mouseout(function ()
+				{	//out
+					$(this).stop().animate({ top : '-40px', opacity : '0.4' }, { duration : 600 })
+				});
+			});
+		</script>
+				
+	</head>
+	
+	<body onload="alignchat(true);" style="==bodyBackground==">
+		%@
+		<div id="Chat">
+		</div>
+		%@
+	</body>
 </html>
