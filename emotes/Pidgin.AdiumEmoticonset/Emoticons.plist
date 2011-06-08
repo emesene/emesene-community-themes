@@ -42,12 +42,10 @@
 		<dict>
 			<key>Equivalents</key>
 			<array>
-				<string>=-O</string>
-				<string>=-o</string>
-				<string>:-O</string>
-				<string>:-o</string>
 				<string>:O</string>
 				<string>:o</string>
+				<string>:-O</string>
+				<string>:-o</string>
 			</array>
 			<key>Name</key>
 			<string>Shock</string>
@@ -683,8 +681,6 @@
 		<dict>
 			<key>Equivalents</key>
 			<array>
-				<string>:/</string>
-				<string>:-/</string>
 				<string>*-)</string>
 			</array>
 			<key>Name</key>
