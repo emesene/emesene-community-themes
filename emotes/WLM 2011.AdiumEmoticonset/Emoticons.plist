@@ -854,7 +854,7 @@
 			<key>Name</key>
 			<string>Shifty</string>
 		</dict>
-                <key>Annoyed</key>
+                <key>Annoyed.png</key>
 		<dict>
 			<key>Equivalents</key>
 			<array>
